@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d6D-eZ-kfc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Menlo.ttc">
+            <string>Menlo-Bold</string>
+            <string>Menlo-Italic</string>
+            <string>Menlo-Regular</string>
+        </array>
+        <array key="Mishafi.ttf">
+            <string>DiwanMishafi</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--اضافة الملاحظة-->
+        <scene sceneID="gKQ-eI-fe7">
+            <objects>
+                <viewController title="اضافة الملاحظة" id="Vxr-QR-ZwC" customClass="ViewController" customModule="NoteWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vG0-K4-b50">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="دخل نص لل محلاظة " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-W6-Oit">
+                                <rect key="frame" x="16" y="56" width="343" height="33"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="ادخل ملاحظة" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ShY-S8-G5h">
+                                <rect key="frame" x="16" y="97" width="343" height="288"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="288" id="qyE-eJ-LE4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pN0-SY-TfI">
+                                <rect key="frame" x="0.0" y="12" width="375" height="44"/>
+                                <color key="barTintColor" red="0.29562282560000003" green="0.76221638920000001" blue="0.94595342869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="38"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="20"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="اضافة الملاحظه" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="tX4-In-vWd">
+                                        <barButtonItem key="leftBarButtonItem" title="رجوع " springLoaded="YES" id="DWV-Y7-NiZ">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <segue destination="d6D-eZ-kfc" kind="presentation" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="8jz-dG-WR6"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkE-r3-hic">
+                                <rect key="frame" x="16" y="393" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.59998394690000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="اضافة الملاحظة">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="butSave:" destination="Vxr-QR-ZwC" eventType="touchUpInside" id="Ew6-eO-SEz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29562282560000003" green="0.76221638920000001" blue="0.94595342869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HLM-W6-Oit" firstAttribute="leading" secondItem="Svk-UY-6KO" secondAttribute="leading" constant="16" id="1F3-PE-cxs"/>
+                            <constraint firstItem="Svk-UY-6KO" firstAttribute="trailing" secondItem="CkE-r3-hic" secondAttribute="trailing" constant="16" id="A2j-Be-n5w"/>
+                            <constraint firstItem="ShY-S8-G5h" firstAttribute="top" secondItem="HLM-W6-Oit" secondAttribute="bottom" constant="8" symbolic="YES" id="A99-0h-Nlq"/>
+                            <constraint firstItem="CkE-r3-hic" firstAttribute="top" secondItem="ShY-S8-G5h" secondAttribute="bottom" constant="8" symbolic="YES" id="Bbr-bh-mWO"/>
+                            <constraint firstItem="ShY-S8-G5h" firstAttribute="centerX" secondItem="pN0-SY-TfI" secondAttribute="centerX" id="Bs2-Tc-BbX"/>
+                            <constraint firstItem="pN0-SY-TfI" firstAttribute="leading" secondItem="vG0-K4-b50" secondAttribute="leading" id="DBx-lD-Mom"/>
+                            <constraint firstItem="Svk-UY-6KO" firstAttribute="trailing" secondItem="HLM-W6-Oit" secondAttribute="trailing" constant="16" id="NTX-pM-tmT"/>
+                            <constraint firstItem="ShY-S8-G5h" firstAttribute="width" secondItem="HLM-W6-Oit" secondAttribute="width" id="OMz-vz-htD"/>
+                            <constraint firstItem="ShY-S8-G5h" firstAttribute="top" secondItem="vG0-K4-b50" secondAttribute="top" constant="97" id="Qbp-zx-8aC"/>
+                            <constraint firstItem="Svk-UY-6KO" firstAttribute="trailing" secondItem="ShY-S8-G5h" secondAttribute="trailing" constant="16" id="WWL-Za-T6a"/>
+                            <constraint firstItem="CkE-r3-hic" firstAttribute="leading" secondItem="Svk-UY-6KO" secondAttribute="leading" constant="16" id="Yra-sp-V7R"/>
+                            <constraint firstItem="ShY-S8-G5h" firstAttribute="leading" secondItem="Svk-UY-6KO" secondAttribute="leading" constant="16" id="fPH-7d-Hhb"/>
+                            <constraint firstItem="CkE-r3-hic" firstAttribute="width" secondItem="HLM-W6-Oit" secondAttribute="width" id="uQw-5p-pGh"/>
+                            <constraint firstItem="pN0-SY-TfI" firstAttribute="bottom" secondItem="HLM-W6-Oit" secondAttribute="top" id="zsn-TQ-hLG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Svk-UY-6KO"/>
+                    </view>
+                    <connections>
+                        <outlet property="txDes" destination="ShY-S8-G5h" id="Wfa-sp-VwE"/>
+                        <outlet property="txTitle" destination="HLM-W6-Oit" id="jJT-Nu-XA4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pt5-2j-ViZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-69674" y="330"/>
+        </scene>
+        <!--Vc List Note-->
+        <scene sceneID="a8C-LE-5Iq">
+            <objects>
+                <viewController id="d6D-eZ-kfc" customClass="VcListNote" customModule="NoteWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LdD-1T-sSa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfo-1N-UOe">
+                                <rect key="frame" x="0.0" y="12" width="375" height="44"/>
+                                <color key="barTintColor" red="0.29562282560000003" green="0.76221638920000001" blue="0.94595342869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="38"/>
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="20"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="قائمة الملاحظات" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="Wmf-vz-vc9">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="J1x-dP-gFF">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="buAdd:" destination="d6D-eZ-kfc" id="s1q-Bw-dhL"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jgw-wh-3nx">
+                                <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.047058823530000002" green="0.50980392159999999" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.047058823530000002" green="0.50980392159999999" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellNotes" rowHeight="390" id="irl-Zi-9a0" customClass="TVCNotes" customModule="NoteWork" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="390"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="irl-Zi-9a0" id="1kN-dd-6xs">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="389.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="عنوان" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dao-ah-Bgw">
+                                                    <rect key="frame" x="10" y="5" width="358" height="32"/>
+                                                    <color key="backgroundColor" red="0.29562282560000003" green="0.76221638920000001" blue="0.94595342869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="7Hl-n0-83I"/>
+                                                        <constraint firstAttribute="height" constant="32" id="GDs-jD-Zge"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="ادخل ملاحظة" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="yYR-lZ-oTf">
+                                                    <rect key="frame" x="10" y="45" width="358" height="227"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="227" id="hm5-xT-9z8"/>
+                                                        <constraint firstAttribute="width" constant="358" id="qA5-Mc-2DG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ko8-YG-vCr">
+                                                    <rect key="frame" x="10" y="280" width="130" height="39"/>
+                                                    <color key="backgroundColor" red="0.29562282560000003" green="0.76221638920000001" blue="0.94595342869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="nZz-bR-drn"/>
+                                                        <constraint firstAttribute="height" constant="39" id="rm3-Sk-73V"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="39" id="rr3-WC-VwP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="23"/>
+                                                    <state key="normal" title="تحریر">
+                                                        <color key="titleColor" red="0.047058823530000002" green="0.50980392159999999" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="تاریخ :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ub-Hk-LSS">
+                                                    <rect key="frame" x="10" y="327" width="358" height="52"/>
+                                                    <color key="backgroundColor" red="0.29562282560000003" green="0.76221638920000001" blue="0.94595342869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="14"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O1A-wH-aT2">
+                                                    <rect key="frame" x="238" y="280" width="130" height="39"/>
+                                                    <color key="backgroundColor" red="0.29562282560000003" green="0.76221638920000001" blue="0.94595342869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="39" id="75r-uY-J8d"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="130" id="TFy-he-O66"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="39" id="o0c-Kd-rLo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="23"/>
+                                                    <color key="tintColor" red="0.29562282560000003" green="0.76221638920000001" blue="0.94595342869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="حذف">
+                                                        <color key="titleColor" red="1" green="0.0" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4Ub-Hk-LSS" firstAttribute="top" secondItem="O1A-wH-aT2" secondAttribute="top" constant="47" id="8KP-0Z-YbP"/>
+                                                <constraint firstItem="yYR-lZ-oTf" firstAttribute="top" secondItem="dao-ah-Bgw" secondAttribute="bottom" constant="8" symbolic="YES" id="HfA-9D-tOa"/>
+                                                <constraint firstItem="dao-ah-Bgw" firstAttribute="top" secondItem="1kN-dd-6xs" secondAttribute="top" constant="5" id="Jgp-MW-Hh8"/>
+                                                <constraint firstItem="O1A-wH-aT2" firstAttribute="leading" secondItem="4Ub-Hk-LSS" secondAttribute="trailing" constant="-130" id="KM5-ov-uZz"/>
+                                                <constraint firstItem="dao-ah-Bgw" firstAttribute="trailing" secondItem="yYR-lZ-oTf" secondAttribute="trailing" id="OIL-HX-cBW"/>
+                                                <constraint firstItem="Ko8-YG-vCr" firstAttribute="baseline" secondItem="O1A-wH-aT2" secondAttribute="baseline" id="Rrj-Ar-sxC"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="O1A-wH-aT2" secondAttribute="trailing" constant="-8" id="W0B-gV-MNT"/>
+                                                <constraint firstItem="dao-ah-Bgw" firstAttribute="leading" secondItem="1kN-dd-6xs" secondAttribute="leadingMargin" constant="-5" id="XGb-zp-3gw"/>
+                                                <constraint firstItem="Ko8-YG-vCr" firstAttribute="top" secondItem="yYR-lZ-oTf" secondAttribute="bottom" constant="8" symbolic="YES" id="Y6Q-0b-fJG"/>
+                                                <constraint firstItem="4Ub-Hk-LSS" firstAttribute="leading" secondItem="Ko8-YG-vCr" secondAttribute="trailing" constant="-130" id="auo-Ns-uaZ"/>
+                                                <constraint firstItem="4Ub-Hk-LSS" firstAttribute="bottom" secondItem="O1A-wH-aT2" secondAttribute="bottom" constant="60" id="jxm-0t-IcK"/>
+                                                <constraint firstItem="Ko8-YG-vCr" firstAttribute="leading" secondItem="1kN-dd-6xs" secondAttribute="leadingMargin" constant="-5" id="mjD-IK-UMD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="dao-ah-Bgw" secondAttribute="trailing" constant="-8" id="sK0-80-nkC"/>
+                                                <constraint firstItem="dao-ah-Bgw" firstAttribute="leading" secondItem="yYR-lZ-oTf" secondAttribute="leading" id="uF0-mS-Pc7"/>
+                                                <constraint firstItem="Ko8-YG-vCr" firstAttribute="bottom" secondItem="1kN-dd-6xs" secondAttribute="bottomMargin" constant="-60" id="zYm-gP-o8M"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="LiDate" destination="4Ub-Hk-LSS" id="KIZ-1P-WJB"/>
+                                            <outlet property="LiDesc" destination="yYR-lZ-oTf" id="bRI-XJ-Mup"/>
+                                            <outlet property="LiTitle" destination="dao-ah-Bgw" id="DtV-dw-dQ9"/>
+                                            <outlet property="buDelete" destination="O1A-wH-aT2" id="eVu-7m-ndj"/>
+                                            <outlet property="buEdit" destination="Ko8-YG-vCr" id="9Bn-2f-0ad"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="d6D-eZ-kfc" id="d2K-8z-UjK"/>
+                                    <outlet property="delegate" destination="d6D-eZ-kfc" id="Jpo-0P-hmR"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29562282560000003" green="0.76221638920000001" blue="0.94595342869999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sfo-1N-UOe" secondAttribute="trailing" id="E3I-qm-gm6"/>
+                            <constraint firstItem="sfo-1N-UOe" firstAttribute="top" secondItem="LdD-1T-sSa" secondAttribute="topMargin" constant="-8" id="Gdp-Tb-ywe"/>
+                            <constraint firstItem="sfo-1N-UOe" firstAttribute="leading" secondItem="jgw-wh-3nx" secondAttribute="leading" id="KKP-tw-KqR"/>
+                            <constraint firstItem="sfo-1N-UOe" firstAttribute="leading" secondItem="LdD-1T-sSa" secondAttribute="leading" id="X1E-tj-wGd"/>
+                            <constraint firstItem="sfo-1N-UOe" firstAttribute="trailing" secondItem="jgw-wh-3nx" secondAttribute="trailing" id="aWu-5V-9QK"/>
+                            <constraint firstItem="jgw-wh-3nx" firstAttribute="top" secondItem="sfo-1N-UOe" secondAttribute="bottom" id="cjM-x8-MoR"/>
+                            <constraint firstItem="jgw-wh-3nx" firstAttribute="bottom" secondItem="Zaz-qe-6de" secondAttribute="bottom" id="v32-pe-TzY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zaz-qe-6de"/>
+                    </view>
+                    <connections>
+                        <outlet property="tbNotesList" destination="jgw-wh-3nx" id="LxO-my-Ele"/>
+                        <segue destination="Vxr-QR-ZwC" kind="presentation" identifier="EditorAddSegway" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="Rwb-6X-Mx9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jU-B5-8bF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-70402" y="330"/>
+        </scene>
+    </scenes>
+</document>
